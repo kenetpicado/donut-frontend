@@ -12,11 +12,11 @@
 					{{ approved ? 'Aprobado' : 'Reprobado' }}
 				</div>
 			</div>
-
 			<div :class="total_style + ' font-semibold text-xl ml-2'">
 				{{ component.total }}
 			</div>
 		</div>
+
 	</div>
 </template>
 

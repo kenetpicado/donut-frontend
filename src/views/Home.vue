@@ -6,12 +6,11 @@
 
 			<div class="flex flex-col">
 				<div class="text-lg font-bold tracking-wide text-center mb-2">donut</div>
-
 				 <form @submit.prevent="getGrades(form)" class="w-48">
 					<input type="text" v-model="form.id" class="input-primary" placeholder="Carnet">
 					<input type="password" v-model="form.password" class="input-primary" placeholder="PIN">
 
-					<select v-model="form.year" class="input-primary appearance-none">
+					<select v-model="form.year" class="select-primary appearance-none">
 						<option value="" disabled selected>Año</option>
 						<option v-for="year in years" value="year" :key="year">{{ year }}</option>
 					</select>
