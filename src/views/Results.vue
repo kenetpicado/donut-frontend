@@ -16,6 +16,6 @@ import Card from "../components/Card.vue";
 import Header from "../components/Header.vue";
 import { useGrades } from "../composables/useGrades"
 
-const { results } = useGrades();
+const results = JSON.parse(localStorage.getItem("results"));
 
 </script>
