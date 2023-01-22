@@ -13,21 +13,38 @@
 				</div>
 			</div>
 			<div :class="total_style + ' font-semibold text-xl ml-2'">
-				{{ component.total }}
+				<label v-if="component.tutorship">{{ component.tutorship }}</label>
+				<label v-else-if="component.course">{{ component.course }}</label>
+				<label v-else>{{ component.total }}</label>
 			</div>
 		</div>
-
 	</div>
 </template>
 
 <script setup>
-	const props = defineProps({
-		component: Object,
-		required: true
-	})
+import  { computed } from 'vue'
 
-	const approved = props.component.total >= 60;
-	const type_text = approved ? 'text-lime-700' : 'text-red-600';
-	const total_style = approved ? '' : 'text-red-600';
+const props = defineProps({
+	component: Object,
+	required: true
+})
+
+const approved = computed(() => {
+	if (props.component.tutorship) {
+		return props.component.tutorship >= 60;
+	} else if (props.component.course) {
+		return props.component.course >= 60;
+	} else {
+		return props.component.total >= 60;
+	}
+})
+
+const type_text = computed(() => {
+	return approved.value ? 'text-lime-700' : 'text-red-600';
+})
+
+const total_style = computed(() => {
+	return approved.value ? '' : 'text-red-600';
+})
 
 </script>

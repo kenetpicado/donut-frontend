@@ -15,15 +15,15 @@
 									<div class="mt-2 sm:mt-0 sm:ml-4 sm:text-left">
 										<DialogTitle as="h3" class="text-lg font-bold">{{ component.name }}</DialogTitle>
 										<div class="mt-4 space-y-4">
-											<div v-if="component.course">
-												Curso de verano
-												<br>
-												Nota final: {{ component.course }}
-											</div>
-											<div v-else-if="component.tutorship">
+											<div v-if="component.tutorship">
 												Tutoria
 												<br>
 												Nota final: {{ component.tutorship }}
+											</div>
+											<div v-else-if="component.course">
+												Curso de verano
+												<br>
+												Nota final: {{ component.course }}
 											</div>
 											<div v-else-if="component.name.includes('ACTIVIDAD ESTUDIANTIL')">
 												{{ component.partial_1 }}

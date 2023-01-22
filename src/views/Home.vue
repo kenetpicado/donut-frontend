@@ -11,14 +11,14 @@
 					<input type="password" v-model="form.password" class="input-primary" placeholder="PIN">
 
 					<select v-model="form.year" class="select-primary appearance-none">
-						<option value="" disabled selected>Año</option>
-						<option v-for="year in years" value="year" :key="year">{{ year }}</option>
+						<option disabled selected :value="null">Selecciona un año</option>
+						<option v-for="year in years" :value="year" :key="year">{{ year }}</option>
 					</select>
 
 					<button class="btn-primary w-full" type="submit">Entrar</button>
 				 </form>
 
-				<p class="text-center mt-4 text-slate-800" style="font-size: 0.7rem;">
+				<p class="text-center mt-4 text-slate-500" style="font-size: 0.7rem;">
 					Copyrigth 2023
 				</p>
 			</div>
@@ -35,12 +35,12 @@ import 'vue-loading-overlay/dist/css/index.css';
 const { getGrades, isLoading } = useGrades();
 
 const form = reactive({
-	id: '16-01275-0',
-	password: 'FIPHU1',
-	year: ''
+	id: "16-01275-0",
+	password: "FIPHU1",
+	year: null
 })
 
-const years = [2022, 2021, 2020, 2019, 2018, 2017];
+const years = [2022, 2021, 2020, 2019, 2018, 2017, 2016];
 
 </script>
 
