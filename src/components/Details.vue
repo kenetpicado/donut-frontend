@@ -16,10 +16,17 @@
 										<DialogTitle as="h3" class="text-lg font-bold">{{ component.name }}</DialogTitle>
 										<div class="mt-4 space-y-4">
 											<div v-if="component.course">
-												Nota final curso de verano: {{ component.course }}
+												Curso de verano
+												<br>
+												Nota final: {{ component.course }}
 											</div>
 											<div v-else-if="component.tutorship">
-												Nota final Tutoria: {{ component.tutorship }}
+												Tutoria
+												<br>
+												Nota final: {{ component.tutorship }}
+											</div>
+											<div v-else-if="component.name.includes('ACTIVIDAD ESTUDIANTIL')">
+												{{ component.partial_1 }}
 											</div>
 											<template v-else>
 												<div>
@@ -65,9 +72,5 @@ defineProps({
 	open: Boolean,
 	component: Object
 })
-
-function isValidNumber(value) {
-	return value != '-' || value != ''
-}
 
 </script>
