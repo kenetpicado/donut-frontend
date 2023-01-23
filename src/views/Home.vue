@@ -35,8 +35,8 @@ import 'vue-loading-overlay/dist/css/index.css';
 const { getGrades, isLoading } = useGrades();
 
 const form = reactive({
-	id: "16-01275-0",
-	password: "FIPHU1",
+	id: null,
+	password: null,
 	year: null
 })
 
