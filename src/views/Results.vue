@@ -50,6 +50,8 @@ const open = ref(false)
 const mainView = ref(true)
 const { result, store, router } = useGrades();
 
+//const result = JSON.parse(localStorage.getItem("result"));
+
 const component = ref([]);
 
 onMounted(() => {
@@ -58,9 +60,9 @@ onMounted(() => {
 	}
 })
 
-function showDetails(component) {
+function showDetails(data) {
+	component.value = data
 	open.value = true
-	this.component = component
 }
 
 const styleFirstButton = computed(() => {

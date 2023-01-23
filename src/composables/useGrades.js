@@ -18,6 +18,7 @@ export function useGrades() {
 		try {
 			const response = await axios.post(API_URL + "v1/grades", data)
 			store.setResult(response.data)
+			//localStorage.setItem('result', JSON.stringify(response.data))
 			router.push({ name: "results" });
 		} catch(e) {
 			if (e.response.status == 401) {
