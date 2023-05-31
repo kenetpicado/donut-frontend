@@ -21,10 +21,9 @@ Este proyecto depende de [donut - backend](https://github.com/kenetpicado/donut)
 
 En él se encuentra un endpoint de prueba que se puede utilizar en caso de carecer de las credenciales necesarias.
 
-Una vez configurado el backend puedes establacer el valor de **VITE_API_URL** según sea tu caso.
+Una vez configurado el backend puedes establacer el valor de **VITE_API_URL** según el caso.
 
-### Entorno
-Posibles valores de VITE_API_URL
+Posibles valores de **VITE_API_URL**
 - `127.0.0.1:8000/api` para un entorno de desarrollo local
 - `cb-develop.tk/api` servidor de producción
 
@@ -32,6 +31,15 @@ Posibles valores de VITE_API_URL
 
 - Inicia la aplicación en modo de desarrollo: `npm run dev`
 - Compila y minifica los archivos para producción: `npm run build`
+
+## 🛠️ Construido con
+
+- 💚 [Vue.js](https://vuejs.org/): Un framework de JavaScript para construir interfaces de usuario interactivas y reactivas.
+- 🎨 [Tailwind CSS](https://tailwindcss.com/): Un framework de CSS utilitario altamente personalizable para crear diseños rápidos y modernos.
+- ⚡️ [Vite](https://vitejs.dev/): Un bundler rápido y liviano para aplicaciones web modernas en JavaScript.
+
+Estas tecnologías han sido fundamentales en el desarrollo de este proyecto y han proporcionado una base sólida para construir una aplicación web eficiente y con una excelente experiencia de usuario.
+
 
 ## 🤝 Contribución
 
@@ -49,6 +57,6 @@ Este proyecto se encuentra bajo la [Licencia MIT](https://opensource.org/license
 
 ## ✨ Agradecimientos
 
-
-- [Roberto Berrios:](https://github.com/Roberto-Berrios) Por su invaluable conocimiento técnico y sus sugerencias que han mejorado significativamente el proyecto.
 - [Aileen Castro:](https://www.instagram.com/hahaileen/) Por su incansable apoyo en la prueba y validación del proyecto, así como por sus comentarios y retroalimentación constructiva.
+- [Roberto Berrios:](https://github.com/Roberto-Berrios) Por su invaluable conocimiento técnico y sus sugerencias que han mejorado significativamente el proyecto.
+
