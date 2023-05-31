@@ -8,6 +8,9 @@ Caracterizada por una interfaz intuitiva y amigable, **donut** ofrece una experi
 
 **donut** se basa en tecnologías web modernas, lo que garantiza su accesibilidad y compatibilidad con diferentes dispositivos y navegadores. La seguridad de los datos es una prioridad, ningún dato es recopilado.
 
+![cover-dontut](https://github.com/kenetpicado/donut-frontend/assets/83382624/f2ae1aa6-6c23-43a7-8daf-755cc693ec6e)
+
+
 ## 🚀 Instalación
 
 Sigue estos pasos para instalar y ejecutar el proyecto en tu máquina local:
