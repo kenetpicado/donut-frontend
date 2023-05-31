@@ -16,8 +16,8 @@ export function useGrades() {
 	async function getGrades(data) {
 		isLoading.value = true;
 		try {
-			// const response = await axios.post(API_URL + "/v1/grades", data)
-			const response = await axios.post(API_URL + "/test", data);
+			const response = await axios.post(API_URL + "/v1/grades", data)
+			// const response = await axios.post(API_URL + "/test", data);
 			store.setGrades(response.data);
 			router.push({ name: "results" });
 		} catch (e) {
