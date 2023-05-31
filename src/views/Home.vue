@@ -3,7 +3,6 @@
 		<loading v-model:active="isLoading" :is-full-page="true"/>
 
 		<div class="grid h-screen place-items-center">
-
 			<div class="flex flex-col">
 				<div class="text-lg font-bold tracking-wide text-center mb-2">donut</div>
 				 <form @submit.prevent="getGrades(form)" class="w-48">
@@ -27,7 +26,7 @@
 </template>
 
 <script setup>
-import { reactive, ref } from "vue"
+import { reactive } from "vue"
 import { useGrades } from "../composables/useGrades"
 import Loading from 'vue-loading-overlay';
 import 'vue-loading-overlay/dist/css/index.css';

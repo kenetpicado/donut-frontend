@@ -2,33 +2,34 @@ import { ref } from "vue";
 import axios from "axios";
 import { toast } from "../utils/toast.js";
 import { useRouter } from "vue-router";
-import { useResultStore } from "../stores/useResult.js"
+import { useGradesStore } from "../stores/useGrades.js";
 import { storeToRefs } from "pinia";
 
 export function useGrades() {
 	const router = useRouter();
 	const API_URL = import.meta.env.VITE_API_URL;
-	const isLoading = ref(false)
-	const store = useResultStore();
+	const isLoading = ref(false);
+	const store = useGradesStore();
 
-	const { result } = storeToRefs(store);
+	const { grades } = storeToRefs(store);
 
 	async function getGrades(data) {
 		isLoading.value = true;
 		try {
-			const response = await axios.post(API_URL + "v1/grades", data)
-			store.setResult(response.data)
-			//localStorage.setItem('result', JSON.stringify(response.data))
+			// const response = await axios.post(API_URL + "/v1/grades", data)
+			const response = await axios.post(API_URL + "/test", data);
+			store.setGrades(response.data);
 			router.push({ name: "results" });
-		} catch(e) {
+		} catch (e) {
 			if (e.response.status == 401) {
-				toast.error('Oops, algo no salio bien')
+				toast.error("Oops, algo no salio bien");
 			} else {
-				toast.error(Object.values(e.response.data.errors)[0].toString())
+				toast.error(Object.values(e.response.data.errors)[0].toString());
 			}
+		} finally {
+			isLoading.value = false;
 		}
-		isLoading.value = false;
 	}
 
-	return { getGrades, isLoading, result, store, router }
+	return { getGrades, isLoading, grades, store, router };
 }

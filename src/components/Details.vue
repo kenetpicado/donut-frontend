@@ -20,39 +20,25 @@
 							<div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
 								<div class="sm:flex sm:items-start">
 									<div class="mt-2 sm:mt-0 sm:ml-4 sm:text-left">
-										<DialogTitle as="h3" class="text-lg font-bold">{{ component.name }}
+										<DialogTitle as="h3" class="text-lg font-bold">
+											{{ component.name }}
 										</DialogTitle>
 										<div class="mt-4 space-y-4">
-											<div v-if="component.tutorship">
-												Tutoria
-												<br>
-												Nota final: {{ component.tutorship }}
+											<div v-if="component.partial_1">
+												Parcial I: {{ component.partial_1 }}
 											</div>
-											<div v-else-if="component.course">
-												Curso de verano
-												<br>
-												Nota final: {{ component.course }}
+											<div v-if="component.partial_2">
+												Parcial II: {{ component.partial_2 }}
 											</div>
-											<div v-else-if="component.name.includes('ACTIVIDAD ESTUDIANTIL')">
-												{{ component.partial_1 }}
+											<div v-if="component.partial_3">
+												Parcial III: {{ component.partial_3 }}
 											</div>
-											<template v-else>
-												<div>
-													Parcial I: {{ component.partial_1 }}
-												</div>
-												<div>
-													Parcial II: {{ component.partial_2 }}
-												</div>
-												<div>
-													Parcial III: {{ component.partial_3 }}
-												</div>
-												<div class="font-bold">
-													Nota final: {{ component.total }}
-												</div>
-												<div v-if="component.second_call">
-													Segunda convocatoria: {{ component.second_call }}
-												</div>
-											</template>
+											<div v-if="component.final" class="font-bold">
+												Nota final: {{ component.final }}
+											</div>
+											<div v-if="component.second_call">
+												Segunda convocatoria: {{ component.second_call }}
+											</div>
 										</div>
 									</div>
 								</div>
