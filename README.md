@@ -1,7 +1,8 @@
 
 # donut
+![Frontend](https://img.shields.io/badge/Frontend-blue)
 
-Herramienta diseñada para mejorar la experiencia de los estudiantes de la Universidad Nacional Autónoma de Nicaragua - León al consultar sus calificaciones. Con esta aplicación, los estudiantes pueden acceder de manera rápida y sencilla a sus notas académicas.
+Interfaz diseñada para mejorar la experiencia de los estudiantes de la Universidad Nacional Autónoma de Nicaragua - León al consultar sus calificaciones. Con esta aplicación, los estudiantes pueden acceder de manera rápida y sencilla a sus notas académicas.
 
 Caracterizada por una interfaz intuitiva y amigable, **donut** ofrece una experiencia de usuario optimizada para dispositivos móviles, permitiendo a los estudiantes acceder a sus calificaciones en cualquier momento y lugar, desde la comodidad de sus teléfonos inteligentes.
 
@@ -16,16 +17,13 @@ Sigue estos pasos para instalar y ejecutar el proyecto en tu máquina local:
 3. Instala las dependencias: `npm install`
 
 ## ⚙️ Configuración
-
-Este proyecto depende de [donut - backend](https://github.com/kenetpicado/donut) por lo que es importante desplegarlo con anterioridad.
-
-En él se encuentra un endpoint de prueba que se puede utilizar en caso de carecer de las credenciales necesarias.
-
-Una vez configurado el backend puedes establacer el valor de **VITE_API_URL** según el caso.
-
-Posibles valores de **VITE_API_URL**
-- `127.0.0.1:8000/api` para un entorno de desarrollo local
-- `cb-develop.tk/api` servidor de producción
+Configuración recomendada para un entorno de desarrollo
+- Asegúrate de configurar: `VITE_API_URL="cb-develop.tk/api"` en el archivo `.env`
+- En `useGrades.js` ejecuta la peticion a:
+```
+const response = await axios.post(API_URL + "/test", data);
+```
+Donde data contiene `year` cuyos valores pueden ser: 2016, 2020, 2021, 2022.
 
 ## 📦 Uso
 
@@ -39,6 +37,18 @@ Posibles valores de **VITE_API_URL**
 - ⚡️ [Vite](https://vitejs.dev/): Un bundler rápido y liviano para aplicaciones web modernas en JavaScript.
 
 Estas tecnologías han sido fundamentales en el desarrollo de este proyecto y han proporcionado una base sólida para construir una aplicación web eficiente y con una excelente experiencia de usuario.
+
+## 👥 Autores
+- [Kenet Picado](https://github.com/kenetpicado)
+- [Jairo Paniagua](https://github.com/jey1322)
+
+## 📱 Disponible también para Android
+
+¡Buenas noticias! Nuestra aplicación también está disponible para dispositivos Android. Si deseas obtener más información sobre la versión de Android de la aplicación, puedes consultar nuestro repositorio oficial.
+
+🔗 [Repositorio de la Aplicación Android](https://github.com/jey1322/Donut_androidApp)
+
+¡Esperamos que disfrutes de la aplicación tanto en la web como en dispositivos Android!
 
 
 ## 🤝 Contribución
