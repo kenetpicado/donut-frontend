@@ -15,8 +15,8 @@ Caracterizada por una interfaz intuitiva y amigable, **donut** ofrece una experi
 
 Sigue estos pasos para instalar y ejecutar el proyecto en tu máquina local:
 
-1. Clona este repositorio: `git clone https://github.com/tu-usuario/tu-proyecto.git`
-2. Ve al directorio del proyecto: `cd tu-proyecto`
+1. Clona este repositorio: `git clone https://github.com/kenetpicado/donut-frontend.git`
+2. Ve al directorio del proyecto: `cd donut-frontend`
 3. Instala las dependencias: `npm install`
 
 ## ⚙️ Configuración
